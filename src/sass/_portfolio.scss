@@ -5,6 +5,14 @@
 		.portfolio-box {
 			position: relative;
 			display: block;
+			&:first-child,
+			&:last-child {
+				min-width: 100%;
+				
+				.gatsby-image-wrapper {
+					min-width: 100%;
+				}
+			}
 			.portfolio-box-caption {
 				display: flex;
 				align-items: center;

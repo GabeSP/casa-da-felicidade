@@ -1,9 +1,9 @@
 module.exports = {
   pathPrefix: `/gatsby-creative`,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Instituto Casa da Felicidade`,
+    description: `Associação sem fins lucrativos com o objetivo de promover uma educação católica autêntica por meio da transmissão do grande tesouro espiritual que existe em matéria de educação para as crianças e famílias`,
+    author: `@institutocasadafelicidade`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,15 +17,22 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: 'gatsby-source-googlemaps-geocoding',
+      options: {
+        key: 'AIzaSyD2D4BS6D-Z2LUtOID-zdB9cTfMKvs1MQQ',
+        address: 'R. Mediterrâneo, 982, Jardim do Mar, São Bernardo do Campo'
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `instituto-casa-da-felicidade`,
+        short_name: `casa-da-felicidade`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `002f72`,
+        theme_color: `002f72`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.jpeg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
