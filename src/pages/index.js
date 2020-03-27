@@ -7,8 +7,11 @@ import SEO from "../components/seo"
 import Scroller from "../components/scroller"
 import PortfolioModal from "../components/portfolio/modal"
 import PortfolioCarousel from "../components/portfolio/carousel"
+import ImgCard from '../images/portfolio/fullsize/5.jpg'
 
-import { cards, portfolio, contatos } from '../service/data'
+import { Carousel, Row, Col } from "react-bootstrap"
+
+import { cards, eventos, contatos } from '../service/data'
 
 
 export default class IndexPage extends React.Component {
@@ -72,19 +75,25 @@ export default class IndexPage extends React.Component {
           </div>
         </section> */}
 
-        <section id="portfolio">
-          <div className="container-fluid p-0">
-            <div className="row no-gutters">
-              {portfolio.map(imagem => (
-                <div className="col-lg-4 col-sm-6">
-                  <a className="portfolio-box" href={imagem.img_path} onClick={this.handlePortfolioClick.bind(this, imagem.id)}>
-                    <Img fluid={this.props.data.images.edges[imagem.id].node.childImageSharp.fluid}/>
-                    <div className="portfolio-box-caption">
+        <section id="portfolio" className="page-section">
+          <div className="formacao container">
+              <h2 className="text-center pb-4">Eventos</h2>
+                <div>
+                    <div className="d-flex card-formacao">
+                      {/* <img fluid={this.props.data.images.edges[4].node.childImageSharp.fluid}/> */}
+                      <img className="img-card" src={ImgCard}/>
+                      <div className="d-flex flex-column justify-content-around">
+                        {eventos.map(evento => (
+                          <div>
+                            <h2>{evento.titulo}</h2>
+                            <h5>{evento.subtitulo}</h5>
+                            <p>{evento.descricao}</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </a>
                 </div>
-              ))}
-            </div>
+              {/* <PortfolioCarousel portfolio={portfolio} images={this.props.data.images.edges} current={this.state.modalCurrent}/> */}
           </div>
         </section>
 
@@ -94,7 +103,7 @@ export default class IndexPage extends React.Component {
               <h2><b>Mais de 2000 anos</b> de estudos e práticas cristãs precisam ser ensinados.</h2>
               <p>Junte-se a nós nesta missão.</p>
             </div>
-              <a className="btn btn-light btn-xl" href="https://casadafelicidade.doareacao.com.br/" target="_BLANK">Contribua!</a>
+              <a className="btn-contribua btn btn-light btn-xl" href="https://casadafelicidade.doareacao.com.br/" target="_BLANK">Contribua! <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </section>
 
@@ -124,9 +133,7 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <PortfolioModal show={this.state.modalShow} onHide={() => this.setModal(false, 0)}>
-          <PortfolioCarousel images={this.props.data.images.edges} current={this.state.modalCurrent}/>
-        </PortfolioModal>
+
       </Layout>
     )
   }

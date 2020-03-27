@@ -20,30 +20,21 @@ export const cards = [
   },
 ]
 
-export const portfolio = [
+export const eventos = [
   {
-    id: 0,
-    img_path: 'img/portfolio/fullsize/1.jpg',
+    subtitulo: 'subtitulo evento 1',
+    titulo: 'Evento 1',
+    descricao: 'lorem ipsum dolor site met amet amat Iulia Cantat lalala, Marcus Iulam pulsat'
   },
   {
-    id: 1,
-    img_path: 'img/portfolio/fullsize/2.jpg',
+    subtitulo: 'subtitulo evento 2',
+    titulo: 'Evento 2',
+    descricao: 'Descricao testes 1234 teste 1'
   },
   {
-    id: 2,
-    img_path: 'img/portfolio/fullsize/3.jpg',
-  },
-  {
-    id: 3,
-    img_path: 'img/portfolio/fullsize/4.jpg',
-  },
-  {
-    id: 4,
-    img_path: 'img/portfolio/fullsize/5.jpg',
-  },
-  {
-    id: 5,
-    img_path: 'img/portfolio/fullsize/6.jpg',
+    subtitulo: 'subtitulo evento 3',
+    titulo: 'Evento 3',
+    descricao: 'Descricao testes 1234 teste 1'
   },
 ]
 
