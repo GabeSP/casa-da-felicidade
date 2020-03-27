@@ -91,10 +91,10 @@ export default class IndexPage extends React.Component {
         <section className="page-section bg-dark text-white">
           <div className="icf-section container">
             <div>
-              <h2>Mais de 2000 anos de estudos e práticas cristãs precisam ser ensinados.</h2>
+              <h2><b>Mais de 2000 anos</b> de estudos e práticas cristãs precisam ser ensinados.</h2>
               <p>Junte-se a nós nesta missão.</p>
             </div>
-              <a className="btn btn-light btn-xl" href="#">Contribua!</a>
+              <a className="btn btn-light btn-xl" href="https://casadafelicidade.doareacao.com.br/">Contribua!</a>
           </div>
         </section>
 
