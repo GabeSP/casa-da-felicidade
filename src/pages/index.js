@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import GoogleMapReact from 'google-map-react'
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -8,6 +7,7 @@ import SEO from "../components/seo"
 import Scroller from "../components/scroller"
 import PortfolioModal from "../components/portfolio/modal"
 import PortfolioCarousel from "../components/portfolio/carousel"
+import Formulario from "../components/formulario"
 
 import escola from '../images/escola.jpg'
 import familia from '../images/familia.jpeg'
@@ -62,18 +62,22 @@ const contatos = [
   {
     icon: 'fab fa-whatsapp',
     text: '(11) 95342-8533',
+    link: `https://api.whatsapp.com/send?phone=5511953428533`
   },
   {
     icon: 'far fa-envelope',
     text: 'escolacasadafelicidade@gmail.com',
+    link: 'mailto:escolacasadafelicidade@gmail.com'
   },
   {
     icon: 'fab fa-instagram',
     text: '@institutocasadafelicidade',
+    link: 'https://www.instagram.com/institutocasadafelicidade/'
   },
   {
     icon: 'fab fa-facebook',
     text: 'institutocasadafelicidade',
+    link: 'https://www.facebook.com/institutocasadafelicidade/'
   }
 ]
 
@@ -174,25 +178,19 @@ export default class IndexPage extends React.Component {
                 <p className="text-muted mb-5">Entre em contato conosco para saber mais!</p>
               </div>
             </div>
-            <div className="row">
-                <GoogleMapReact
-                bootstrapURLKeys={{ key: 'AIzaSyD2D4BS6D-Z2LUtOID-zdB9cTfMKvs1MQQ' }}
-                defaultCenter={[-23.687260, -46.554224]}
-                defaultZoom={14}
-              >
-                <div
-                  className="marker"
-                  lat={-23.687260}
-                  lng={-46.554224}
-                />
-              </GoogleMapReact>
-            </div>
+            {/* <div className="row">
+              <Formulario />
+            </div> */}
             <div className="row">
               {contatos.map(contato => (
-                <div className="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
-                  <i className={`${contato.icon} fa-3x mb-3 text-muted`}></i>
+                <a 
+                  className="icf-redes-sociais col-lg-3 ml-auto text-center mb-5 mb-lg-0"
+                  href={contato.link}
+                  target="_BLANK"
+                >
+                  <i className={`${contato.icon} fa-3x mb-3`}></i>
                   <div>{contato.text}</div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
