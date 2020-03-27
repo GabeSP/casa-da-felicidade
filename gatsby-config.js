@@ -17,13 +17,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-source-googlemaps-geocoding',
-      options: {
-        key: 'AIzaSyD2D4BS6D-Z2LUtOID-zdB9cTfMKvs1MQQ',
-        address: 'R. Mediterrâneo, 982, Jardim do Mar, São Bernardo do Campo'
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `instituto-casa-da-felicidade`,
