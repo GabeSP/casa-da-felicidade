@@ -25,7 +25,7 @@ module.exports = {
         background_color: `002f72`,
         theme_color: `002f72`,
         display: `minimal-ui`,
-        icon: `src/images/logo.jpeg`, // This path is relative to the root of the site.
+        icon: `src/images/logo-escola.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
