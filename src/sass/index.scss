@@ -1,4 +1,8 @@
 .icf-row {
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+  }
+
   justify-content: space-between;
 }
 
@@ -11,6 +15,10 @@
   border-radius: 4px;
 
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 16px;
+  }
 
   h3, p {
     padding: 0 16px 16px;
@@ -39,7 +47,8 @@
 
 .icf-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
 
   > div {
