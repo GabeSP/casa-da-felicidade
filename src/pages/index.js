@@ -94,7 +94,7 @@ export default class IndexPage extends React.Component {
               <h2><b>Mais de 2000 anos</b> de estudos e práticas cristãs precisam ser ensinados.</h2>
               <p>Junte-se a nós nesta missão.</p>
             </div>
-              <a className="btn btn-light btn-xl" href="https://casadafelicidade.doareacao.com.br/">Contribua!</a>
+              <a className="btn btn-light btn-xl" href="https://casadafelicidade.doareacao.com.br/" target="_BLANK">Contribua!</a>
           </div>
         </section>
 

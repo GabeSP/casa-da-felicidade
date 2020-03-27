@@ -33,7 +33,7 @@ QUEM SOMOS */}
                     <Nav.Link href="/">Home</Nav.Link>
                   </li>
                   <li className="nav-item doacao">
-                    <Nav.Link href="https://casadafelicidade.doareacao.com.br/">Seja um benfeitor</Nav.Link>
+                    <Nav.Link href="https://casadafelicidade.doareacao.com.br/" target="_BLANK">Seja um benfeitor</Nav.Link>
                   </li>
                   {/* <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href="#services" onClick={Scroller.handleAnchorScroll}>Services</Nav.Link>
